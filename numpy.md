@@ -11,7 +11,7 @@ np.array([1,2,3,4], dtype=np.float)
 np.array([range(i, i+3) for i in [1,4,7])
 => array([[1,2,3], [4,5,6], [7,8,9]])
 
-# range(a, b) >> a는 포함 b는 미포함
+*** range(a, b) >> a는 포함 b는 미포함
 
 
 np.zeros(10)
@@ -20,7 +20,7 @@ np.full((2,3), 5)
 
 
 np.arange(0,10,2)
-# arange(a,b,c) >> a포함, b 미포함 c 간격으로
+*** arange(a,b,c) >> a포함, b 미포함 c 간격으로
 
 np.linespace(0, 100, 5, dtype=int)
 0 25 50 75 100
@@ -147,21 +147,71 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 배열 연결
 concatenate([list1, list2], axis=0)
+axis 0 -> 첫번째 축
+
+2차원 배열의 경우
+axis 0 -> 아래
+axis 1 -> 옆
+
+np.vstack () vertical stack
+np.hstack () horizon stack
+
 
 list1 = [1 2 3]
 list2 = [4 5 6]
 
+arr1 = np.concaternate([list1, list2], axis=0)
+[1 2 3 4 5 6]
+
+arr2 = arr1.reshape(-1, 3)
+[[1 2 3]
+ [4 5 6]]
+ 
+
+np.concatenate([arr2, arr2], axis=0) === np.vstack([arr2, arr2])
+[[1 2 3]
+ [4 5 6]
+ [1 2 3]
+ [4 5 6]]
+
+
+np.concatenate([arr2, arr2], axis=1) === np.hstack([arr2, arr2])
+[[1 2 3 1 2 3]
+ [4 5 6 4 5 6]]
 
 
 
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 
+np 내장함수
+arr = 
+[[1 2]
+ [3 4]]
 
 
+np.sum(arr) === arr.sum()
+=> 10
+
+np.sum(arr, axis=0) === arr.sum(axis=0)
+=> [4 6]
+
+np.sum(arr, axis=1) === arr.sum(axis=1)
+=> [3 7]
+
+np.min(arr, axis=0) === arr.min(axis=0)
+=> [1 2]
+
+np.min(arr, axis=1) === arr.min(axis=1)
+=> [1 3]
+
+np.max(arr, axis=0) === arr.max(axis=0)
+=> [3 4]
+
+np.max(arr, axis=1) === arr.max(axis=1)
+=> [2 4]
 
 
+np.sort(arr) === arr.sort()
 
-
-
-
-
+np.argsort(arr) => 정렬된 인덱스를 반환
