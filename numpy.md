@@ -86,7 +86,7 @@ arr[0, 0] = 1
  *** arr[0][0] => X (자바, C 등과는 다름)
 
 slicing
-start:end:step
+start : end : step
 포함: 미포함: 간격
 
 arr1 = [0 1 2 3 4 5 6 7 8 9]
