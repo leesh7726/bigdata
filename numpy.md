@@ -22,7 +22,7 @@ np.full((2,3), 5)
 np.arange(0,10,2)
 *** arange(a,b,c) >> a포함, b 미포함 c 간격으로
 
-np.linespace(0, 100, 5, dtype=int)
+np.linspace(0, 100, 5, dtype=int)
 0 25 50 75 100
 0부터 100사이 5개 구간
 
