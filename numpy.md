@@ -193,22 +193,22 @@ arr =
 np.sum(arr) === arr.sum()
 => 10
 
-np.sum(arr, axis=0) === arr.sum(axis=0)
+np.sum(arr, axis=0) 
 => [4 6]
 
-np.sum(arr, axis=1) === arr.sum(axis=1)
+np.sum(arr, axis=1) 
 => [3 7]
 
-np.min(arr, axis=0) === arr.min(axis=0)
+np.min(arr, axis=0) 
 => [1 2]
 
-np.min(arr, axis=1) === arr.min(axis=1)
+np.min(arr, axis=1) 
 => [1 3]
 
-np.max(arr, axis=0) === arr.max(axis=0)
+np.max(arr, axis=0) 
 => [3 4]
 
-np.max(arr, axis=1) === arr.max(axis=1)
+np.max(arr, axis=1) 
 => [2 4]
 
 
